@@ -11,13 +11,13 @@ const CardComponent = ({ className, cardTitle, value, lastUpdate, cardSubtitle }
       <Typography color="textSecondary" gutterBottom>
         {cardTitle}
       </Typography>
-      <Typography variant="h5" component="h2">
+      <Typography variant="h5" component="h2"className={styles.cardValue}>
         <CountUp start={0} end={value} duration={2.75} separator="," />
       </Typography>
-      <Typography color="textSecondary">
+      <Typography color="textSecondary" className={styles.cardDate}>
         {new Date(lastUpdate).toDateString()}
       </Typography>
-      <Typography variant="body2" component="p">
+      <Typography variant="body2" component="p" className={styles.cardP}>
         {cardSubtitle}
       </Typography>
     </CardContent>
