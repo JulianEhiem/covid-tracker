@@ -1,12 +1,35 @@
 body {
-    background-color: #0B3C49;
+    position: relative;
+    background: url(images/worldmap.jpg) center/cover no-repeat;
 }
+
+.overlay {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background-color: #91ACC1;
+    position: absolute;
+    opacity: 0.53;
+    z-index: -3;
+}
+/* 
+body::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: #91ACC1;
+    opacity: 0.53;
+    z-index: 1; 
+} */
 
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 3;
 }
 
 .image {

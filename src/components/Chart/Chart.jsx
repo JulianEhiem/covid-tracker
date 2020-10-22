@@ -45,7 +45,6 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         data={{
           labels: dailyData.map(({ date }) => new Date(date).toLocaleDateString()).reverse(),
           datasets: [{
-            // data: dailyData.map((data) => data.confirmed),
             data: dailyData.map((data) => data.confirmed).reverse(),
             label: 'Infected',
             borderColor: '#3333ff',

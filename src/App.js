@@ -34,6 +34,7 @@ class App extends React.Component {
 
         return (
             <div className={styles.container}>
+                <div className={styles.overlay}></div>
                 <img className={styles.image} src={coronaImage} alt='COVID-19' />
                 <Cards  data={data} />
                 <CountryPicker handleCountryChange={this.handleCountryChange}/>
