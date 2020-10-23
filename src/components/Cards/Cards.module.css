@@ -3,27 +3,26 @@
     flex-direction: column;
     align-items: center;
     margin: 50px 0;
+    width: 80%;
   }
   
   .infected {
-    border-bottom: 10px solid #0A8BA2;
+    border-bottom: 7px solid #0A8BA2;
     text-align: center;
+    padding-bottom: 1rem !important;
   }
 
   .infectedTitle {
       color: #0A8BA2;
       font-weight: bold !important;
       font-size: 27px !important;
-  }
-  .infectedValue {
-      color: #000;
-      font-weight: bolder !important;
-      font-size: 37px !important;
+      margin: 1rem 0 !important;
   }
   
   .recovered{
     border-bottom: 10px solid #0AA23F;
     text-align: center;
+    padding-bottom: 1rem !important;
 
   }
 
@@ -31,12 +30,14 @@
     color: #0AA23F;
     font-weight: bold !important;
     font-size: 27px !important;
+    margin: 1rem 0 !important;
 
 }
   
   .deaths{
     border-bottom: 10px solid #DD3722;
     text-align: center;
+    padding-bottom: 1rem !important;
 
   }
 
@@ -44,5 +45,6 @@
     color: #DD3722;
     font-weight: bold !important;
     font-size: 27px !important;
+    margin: 1rem 0 !important;
 
 }

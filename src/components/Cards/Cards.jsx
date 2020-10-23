@@ -12,15 +12,15 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   return (
     <div className={styles.container}>
         <Typography gutterBottom variant="h4" component="h2">Worldwide</Typography>
-      <Grid container spacing={3} justify="center">
+      <Grid container spacing={1} justify="center">
         <CardComponent
           className={styles.infected}
           cardTitle={
-              <Typography className={styles.infectedTitle} gutterBottom variant='h5' component='h2'>Infected</Typography>
+              <Typography className={styles.infectedTitle} gutterBottom variant='h5' >Infected</Typography>
           }
           value={confirmed.value}
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of active cases from COVID-19."
+        //   cardSubtitle="Number of active cases from COVID-19."
         />
         <CardComponent
           className={styles.recovered}
@@ -29,7 +29,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         }
           value={recovered.value}
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of recoveries from COVID-19."
+        //   cardSubtitle="Number of recoveries from COVID-19."
         />
         <CardComponent
           className={styles.deaths}
@@ -38,7 +38,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         }
           value={deaths.value}
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of deaths caused by COVID-19."
+        //   cardSubtitle="Number of deaths caused by COVID-19."
         />
       </Grid>
     </div>
