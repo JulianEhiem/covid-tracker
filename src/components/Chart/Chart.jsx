@@ -34,6 +34,19 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         options={{
           legend: { display: false },
           title: { display: true, text: `Current state in ${country}` },
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true,
+                    fontColor:'white'
+                }
+            }],
+            xAxes: [{
+                ticks: {
+                    fontColor:'white'
+                }
+            }]
+        }
         }}
       />
     ) : null
@@ -47,22 +60,41 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
           datasets: [{
             data: dailyData.map((data) => data.confirmed).reverse(),
             label: 'Infected',
-            borderColor: '#3333ff',
+            borderColor: '#0A8BA2',
+            pointBorderColor:'#0A8BA2',
+            pointRadius: 1,
             fill: true,
-          }, {
+            }, {
             data: dailyData.map((data) => data.deaths).reverse(),
             label: 'Deaths',
-            borderColor: 'red',
-            backgroundColor: 'rgba(255, 0, 0, 0.5)',
+            borderColor: '#DD3722',
+            pointBorderColor:'#DD3722',
+            pointRadius: 1,
             fill: true,
           },  {
             data: dailyData.map((data) => data.recovered).reverse(),
             label: 'Recovered',
-            borderColor: 'green',
-            backgroundColor: 'rgba(0, 255, 0, 0.5)',
+            borderColor: '#0AA23F',
+            pointBorderColor:'#0AA23F',
+            pointRadius: 1,
             fill: true,
           },
           ],
+        }}
+        options={ {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true,
+                        fontColor:'white'
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor:'white'
+                    }
+                }]
+            }
         }}
       />
     ) : null
